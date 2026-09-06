@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Online Course Enrollment & Student Registration</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Online Course Enrollment & Student Registration</h1>
+
+        <p>
+            Welcome to <strong>TechLearn Academy</strong>! Register below to enroll
+            in a technical course and choose your preferred learning mode, batch,
+            interests, and learning goals.
+        </p>
+
+       
+        <img 
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80"
+            alt="Students learning programming and technology"
+            width="700"
+        >
+
+        <p>
+            Want to know more about our courses?
+            <a href="https://www.coursera.org/" target="_blank">
+                View Course Information
+            </a>
+        </p>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <form action="#" method="post">
+
+           
+            <fieldset>
+                <legend><strong>Account Information</strong></legend>
+
+                <p>
+                    <label for="studentName">Full Name:</label><br>
+                    <input 
+                        type="text"
+                        id="studentName"
+                        name="student_name"
+                        placeholder="Enter your full name"
+                        minlength="3"
+                        maxlength="50"
+                        pattern="[A-Za-z ]+"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input 
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="password">Create Password:</label><br>
+                    <input 
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter a strong password"
+                        minlength="8"
+                        maxlength="20"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="mobile">Mobile Number:</label><br>
+                    <input 
+                        type="tel"
+                        id="mobile"
+                        name="mobile_number"
+                        placeholder="Enter 10-digit mobile number"
+                        pattern="[0-9]{10}"
+                        minlength="10"
+                        maxlength="10"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label><br>
+                    <input 
+                        type="date"
+                        id="dob"
+                        name="date_of_birth"
+                        required
+                    >
+                </p>
+
+            </fieldset>
+
+            <br>
+
+            
+            <fieldset>
+                <legend><strong>Course & Batch Selection</strong></legend>
+
+                <p>
+                    <label for="course">Select Your Course:</label><br>
+                    <select id="course" name="course" required>
+                        <option value="">-- Select a Course --</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="python-programming">Python Programming</option>
+                        <option value="java-programming">Java Programming</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="cyber-security">Cyber Security</option>
+                        <option value="database-management">Database Management</option>
+                        <option value="cloud-computing">Cloud Computing</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="batch">Select Batch / Session:</label><br>
+                    <select id="batch" name="batch_session" required>
+                        <option value="">-- Select Batch --</option>
+                        <option value="morning">Morning Batch - 9:00 AM</option>
+                        <option value="afternoon">Afternoon Batch - 1:00 PM</option>
+                        <option value="evening">Evening Batch - 5:00 PM</option>
+                        <option value="night">Night Batch - 8:00 PM</option>
+                        <option value="weekend">Weekend Batch - Sat & Sun</option>
+                    </select>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+            
+            <fieldset>
+                <legend><strong>Learning Preference</strong></legend>
+
+                <p>Choose your preferred learning mode:</p>
+
+                <input 
+                    type="radio"
+                    id="online"
+                    name="learning_mode"
+                    value="online"
+                    required
+                >
+                <label for="online">Online</label><br>
+
+                <input 
+                    type="radio"
+                    id="offline"
+                    name="learning_mode"
+                    value="offline"
+                >
+                <label for="offline">Offline</label><br>
+
+                <input 
+                    type="radio"
+                    id="hybrid"
+                    name="learning_mode"
+                    value="hybrid"
+                >
+                <label for="hybrid">Hybrid</label>
+
+            </fieldset>
+
+            <br>
+
+           
+            <fieldset>
+                <legend><strong>Technical Interests</strong></legend>
+
+                <p>Select the areas you are interested in:</p>
+
+                <input 
+                    type="checkbox"
+                    id="java"
+                    name="interests"
+                    value="java"
+                >
+                <label for="java">Java</label><br>
+
+                <input 
+                    type="checkbox"
+                    id="python"
+                    name="interests"
+                    value="python"
+                >
+                <label for="python">Python</label><br>
+
+                <input 
+                    type="checkbox"
+                    id="webDevelopment"
+                    name="interests"
+                    value="web-development"
+                >
+                <label for="webDevelopment">Web Development</label><br>
+
+                <input 
+                    type="checkbox"
+                    id="dataStructures"
+                    name="interests"
+                    value="data-structures"
+                >
+                <label for="dataStructures">Data Structures</label><br>
+
+                <input 
+                    type="checkbox"
+                    id="database"
+                    name="interests"
+                    value="database"
+                >
+                <label for="database">Database</label>
+
+            </fieldset>
+
+            <br>
+
+           
+            <fieldset>
+                <legend><strong>Educational Background</strong></legend>
+
+                <p>
+                    <label for="education">Education Level:</label><br>
+                    <select id="education" name="education_level" required>
+                        <option value="">-- Select Education Level --</option>
+                        <option value="12th">12th / Senior Secondary</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="postgraduate">Postgraduate</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="college">College / Institution:</label><br>
+                    <input 
+                        type="text"
+                        id="college"
+                        name="college_institution"
+                        placeholder="Enter college or institution name"
+                        minlength="2"
+                        maxlength="100"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="semester">Current Semester / Year:</label><br>
+                    <input 
+                        type="text"
+                        id="semester"
+                        name="current_semester"
+                        placeholder="Example: 2nd Semester / 1st Year"
+                        maxlength="30"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="experience">
+                        Programming Experience (in years):
+                    </label><br>
+
+                    <input 
+                        type="number"
+                        id="experience"
+                        name="programming_experience"
+                        min="0"
+                        max="20"
+                        step="0.5"
+                        placeholder="0"
+                    >
+                </p>
+
+               
+            </fieldset>
+
+            <br>
+
+            
+            <fieldset>
+                <legend><strong>Learning Goals</strong></legend>
+
+                <p>
+                    <label for="goals">
+                        Tell us about your learning goals:
+                    </label><br>
+
+                    <textarea
+                        id="goals"
+                        name="learning_goals"
+                        rows="6"
+                        cols="60"
+                        placeholder="Describe what you want to learn and achieve from this course..."
+                        minlength="20"
+                        maxlength="500"
+                        required
+                    ></textarea>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+            
+            <fieldset>
+                <legend><strong>Confirmation</strong></legend>
+
+                <input 
+                    type="checkbox"
+                    id="confirmation"
+                    name="confirmation"
+                    value="confirmed"
+                    required
+                >
+
+                <label for="confirmation">
+                    I confirm that the information provided by me is correct
+                    and I agree to the course enrollment terms.
+                </label>
+
+            </fieldset>
+
+            <br>
+
+            
+            <input 
+                type="submit"
+                value="Submit Enrollment"
+            >
+
+            <input 
+                type="reset"
+                value="Reset Form"
+            >
+
+        </form>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 TechLearn Academy | Online Course Enrollment Portal</p>
+    </footer>
+
+</body>
+</html>

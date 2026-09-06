@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>GLA University Admission Application Form</title>
+</head>
+
+<body>
+
+
+    <h1>GLA University Admission Application Form</h1>
+
+    <p>
+        Welcome to <strong>GLA University</strong>. This admission application form
+        is designed for students who wish to apply for admission to various
+        undergraduate and postgraduate programs. Please enter all the required
+        information carefully and make sure that the details provided are correct.
+    </p>
+
+
+    <img src="https://images.unsplash.com/photo-1562774053-701939374585" alt="University campus building" width="600">
+
+    <p>
+        For more information about admissions, visit the
+        <a href="https://www.gla.ac.in/" target="_blank">
+            official GLA University website
+        </a>.
+    </p>
+
+    <hr>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+
+        <h2>Personal Information</h2>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="full_name" placeholder="Enter your full name" minlength="3"
+            maxlength="50" required>
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="date_of_birth" min="1995-01-01" max="2010-12-31" required>
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile_number" placeholder="Enter 10-digit mobile number"
+            pattern="[6-9][0-9]{9}" minlength="10" maxlength="10" required>
+        <br><br>
+
+        <label for="pin">Application PIN:</label>
+        <input type="password" id="pin" name="application_pin" placeholder="Enter 6-digit PIN" minlength="6"
+            maxlength="6" pattern="[0-9]{6}" required>
+        <br><br>
+
+
+        <p><strong>Gender:</strong></p>
+
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+
+        <br><br>
+
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="">-- Select Category --</option>
+            <option value="general">General</option>
+            <option value="obc">OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+            <option value="ews">EWS</option>
+        </select>
+
+        <br><br>
+
+
+        <label for="course">Select Course / Program:</label>
+        <select id="course" name="course_program" required>
+            <option value="">-- Select Course --</option>
+            <option value="btech_cse">B.Tech Computer Science & Engineering</option>
+            <option value="btech_aiml">B.Tech Artificial Intelligence & Machine Learning</option>
+            <option value="btech_ds">B.Tech Data Science</option>
+            <option value="bca">Bachelor of Computer Applications</option>
+            <option value="bba">Bachelor of Business Administration</option>
+            <option value="bpharm">Bachelor of Pharmacy</option>
+            <option value="bcom">Bachelor of Commerce</option>
+            <option value="mba">Master of Business Administration</option>
+        </select>
+
+        <br><br>
+
+
+        <h2>Academic Information</h2>
+
+        <label for="qualification">Previous Qualification:</label>
+        <select id="qualification" name="previous_qualification" required>
+            <option value="">-- Select Qualification --</option>
+            <option value="10th">Class 10</option>
+            <option value="12th">Class 12</option>
+            <option value="diploma">Diploma</option>
+            <option value="graduation">Graduation</option>
+            <option value="post_graduation">Post Graduation</option>
+        </select>
+
+        <br><br>
+
+        <label for="percentage">Percentage / CGPA:</label>
+        <input type="number" id="percentage" name="percentage_cgpa" placeholder="Enter percentage" min="0" max="100"
+            step="0.01" required>
+        <br><br>
+
+        <label for="passing_year">Passing Year:</label>
+        <input type="number" id="passing_year" name="passing_year" min="2000" max="2026" step="1" required>
+        <br><br>
+
+        <label for="institution">School / College Name:</label>
+        <input type="text" id="institution" name="school_college_name" placeholder="Enter school or college name"
+            minlength="2" maxlength="100" required>
+
+        <br><br>
+
+
+        <p><strong>Areas of Interest:</strong></p>
+
+        <input type="checkbox" id="coding" name="interest" value="coding">
+        <label for="coding">Coding & Programming</label>
+
+        <input type="checkbox" id="sports" name="interest" value="sports">
+        <label for="sports">Sports</label>
+
+        <input type="checkbox" id="business" name="interest" value="business">
+        <label for="business">Business</label>
+
+        <input type="checkbox" id="research" name="interest" value="research">
+        <label for="research">Research</label>
+
+        <input type="checkbox" id="cultural" name="interest" value="cultural">
+        <label for="cultural">Cultural Activities</label>
+
+        <br><br>
+
+
+        <h2>Address Information</h2>
+
+        <label for="address">Permanent Address:</label>
+        <br>
+
+        <textarea id="address" name="permanent_address" rows="5" cols="50" minlength="10" maxlength="300"
+            placeholder="Enter your complete permanent address" required></textarea>
+
+        <br><br>
+
+
+        <label for="document">Upload Admission Document:</label>
+        <input type="file" id="document" name="admission_document" accept=".pdf,.jpg,.jpeg,.png" required>
+
+        <br><br>
+
+
+        <h2>Declaration</h2>
+
+        <input type="checkbox" id="declaration" name="declaration" value="accepted" required>
+
+        <label for="declaration">
+            I declare that all the information provided by me in this
+            application form is true and correct to the best of my knowledge.
+            I agree to follow the rules and regulations of GLA University.
+        </label>
+
+        <br><br>
+
+
+        <input type="submit" value="Submit Application">
+
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+    <hr>
+
+
+    <h2>Contact GLA University</h2>
+
+    <p>
+        For admission-related queries, students can visit the
+        <a href="https://www.gla.ac.in/" target="_blank">
+            GLA University official website
+        </a>
+        for further information.
+    </p>
+
+</body>
+
+</html>

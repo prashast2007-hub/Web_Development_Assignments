@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Hospital Appointment Booking</title>
+</head>
+
+<body>
+
+    <h1>Pulse Hospital - Appointment Booking</h1>
+
+
+    <P>
+
+       
+
+<img 
+    src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d"
+    alt="Modern hospital clinic interior"
+    width="700"
+    height="400">
+    </P>
+ 
+
+
+    
+         
+   
+
+
+    
+    
+    
+    
+    Welcome to Pulse Hospital. Please fill out the appointment booking
+        form below to request a visit with one of our doctors. Fields marked
+        with required information must be completed before submitting the form.
+    </p>
+
+    <hr>
+
+    <h2>Hospital Timings</h2>
+
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Opening Time</th>
+            <th>Closing Time</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Friday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>10:00 AM</td>
+            <td>3:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+            <td>Closed</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Appointment Booking Form</h2>
+
+    <form action="#" method="post">
+
+        
+
+        <fieldset>
+            <legend><strong>Patient Information</strong></legend>
+
+            <p>
+                <label for="patientName">Full Name:</label><br>
+                <input 
+                    type="text" 
+                    id="patientName" 
+                    name="patient_name"
+                    minlength="3"
+                    maxlength="50"
+                    pattern="[A-Za-z ]+"
+                    placeholder="Enter your full name"
+                    required>
+            </p>
+
+            <p>
+                <label for="email">Email Address:</label><br>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email"
+                    maxlength="100"
+                    placeholder="example@email.com"
+                    required>
+            </p>
+
+            <p>
+                <label for="mobile">Mobile Number:</label><br>
+                <input 
+                    type="tel" 
+                    id="mobile" 
+                    name="mobile"
+                    pattern="[6-9][0-9]{9}"
+                    minlength="10"
+                    maxlength="10"
+                    placeholder="10-digit mobile number"
+                    required>
+            </p>
+
+            <p>
+                <label for="dob">Date of Birth:</label><br>
+                <input 
+                    type="date" 
+                    id="dob" 
+                    name="date_of_birth"
+                    min="1900-01-01"
+                    max="2026-12-31"
+                    required>
+            </p>
+
+            <p>
+                <label for="patientId">Patient ID (Optional):</label><br>
+                <input 
+                    type="text" 
+                    id="patientId" 
+                    name="patient_id"
+                    minlength="4"
+                    maxlength="15"
+                    pattern="[A-Za-z0-9-]+"
+                    placeholder="Enter existing patient ID">
+            </p>
+
+        </fieldset>
+
+        <br>
+
+        
+
+        <fieldset>
+            <legend><strong>Appointment Preferences</strong></legend>
+
+            <p>
+                <label for="appointmentDate">Preferred Appointment Date:</label><br>
+                <input 
+                    type="date" 
+                    id="appointmentDate" 
+                    name="appointment_date"
+                    min="2026-09-04"
+                    max="2026-12-31"
+                    required>
+            </p>
+
+            <p>
+                <label for="appointmentTime">Preferred Appointment Time:</label><br>
+                <input 
+                    type="time" 
+                    id="appointmentTime" 
+                    name="appointment_time"
+                    min="09:00"
+                    max="18:00"
+                    required>
+            </p>
+
+            <p>
+                <label for="doctor">Select Doctor:</label><br>
+                <select id="doctor" name="doctor" required>
+                    <option value="">-- Select a Doctor --</option>
+                    <option value="dr_aarav_mehta">
+                        Dr. Aarav Mehta - Cardiologist
+                    </option>
+                    <option value="dr_nisha_sharma">
+                        Dr. Nisha Sharma - Dermatologist
+                    </option>
+                    <option value="dr_rohan_verma">
+                        Dr. Rohan Verma - Orthopedic Specialist
+                    </option>
+                    <option value="dr_riya_kapoor">
+                        Dr. Riya Kapoor - Pediatrician
+                    </option>
+                    <option value="dr_kabir_singh">
+                        Dr. Kabir Singh - General Physician
+                    </option>
+                </select>
+            </p>
+
+        </fieldset>
+
+        <br>
+
+       
+        <fieldset>
+            <legend><strong>Visit Type</strong></legend>
+
+            <input 
+                type="radio" 
+                id="newPatient" 
+                name="visit_type" 
+                value="new_patient"
+                required>
+            <label for="newPatient">New Patient</label><br>
+
+            <input 
+                type="radio" 
+                id="followUp" 
+                name="visit_type" 
+                value="follow_up">
+            <label for="followUp">Follow-up</label><br>
+
+            <input 
+                type="radio" 
+                id="consultation" 
+                name="visit_type" 
+                value="consultation">
+            <label for="consultation">Consultation</label><br>
+
+            <input 
+                type="radio" 
+                id="emergency" 
+                name="visit_type" 
+                value="emergency">
+            <label for="emergency">Emergency</label>
+
+        </fieldset>
+
+        <br>
+
+      
+
+        <fieldset>
+            <legend><strong>Preferred Communication Method</strong></legend>
+
+            <input 
+                type="radio" 
+                id="communicationEmail" 
+                name="communication_method" 
+                value="email"
+                required>
+            <label for="communicationEmail">Email</label><br>
+
+            <input 
+                type="radio" 
+                id="communicationPhone" 
+                name="communication_method" 
+                value="phone">
+            <label for="communicationPhone">Phone Call</label><br>
+
+            <input 
+                type="radio" 
+                id="communicationSms" 
+                name="communication_method" 
+                value="sms">
+            <label for="communicationSms">SMS</label>
+
+        </fieldset>
+
+        <br>
+
+       
+
+        <fieldset>
+            <legend><strong>Visit Details</strong></legend>
+
+            <p>
+                <label for="reason">
+                    Reason for Visit / Additional Information:
+                </label><br>
+
+                <textarea 
+                    id="reason" 
+                    name="reason_for_visit"
+                    rows="6"
+                    cols="50"
+                    minlength="10"
+                    maxlength="500"
+                    placeholder="Please describe the reason for your visit or provide any additional information..."
+                    required></textarea>
+            </p>
+
+        </fieldset>
+
+        <br>
+
+      
+
+        <fieldset>
+            <legend><strong>Appointment Terms</strong></legend>
+
+            <input 
+                type="checkbox" 
+                id="terms" 
+                name="appointment_terms"
+                value="accepted"
+                required>
+
+            <label for="terms">
+                I accept the appointment terms and confirm that the
+                information provided above is correct.
+            </label>
+
+        </fieldset>
+
+        <br>
+
+        
+
+        <input type="submit" value="Book Appointment">
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+    <hr>
+
+    <h2>Need Help?</h2>
+
+    <p>
+        For general hospital assistance, call us at
+        <a href="tel:+911234567890">+91 12345 67890</a>.
+    </p>
+
+    <p>
+        <strong>For medical emergencies, call emergency services immediately:</strong>
+        <a href="tel:112">112 Emergency</a>
+    </p>
+
+    <p>
+        <a href="mailto:help@pulsehospital.example">
+            Email Pulse Hospital Support
+        </a>
+    </p>
+
+</body>
+</html>

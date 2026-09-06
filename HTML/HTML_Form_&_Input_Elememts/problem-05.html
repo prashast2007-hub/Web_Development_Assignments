@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <title>E-Commerce Checkout - DailyCart</title>
+</head>
+
+<body>
+
+
+
+    <header>
+        <h1>DailyCart - Checkout</h1>
+
+        <p>
+            Welcome to <strong>DailyCart</strong>! You are just one step away
+            from completing your purchase. Please review your selected
+            products and provide your delivery and payment information below.
+        </p>
+
+        
+        <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=80"
+            alt="Online shopping checkout with products and payment"
+            width="700"
+        >
+
+        <p>
+            <a href="https://www.amazon.in/" target="_blank">
+                Continue Shopping
+            </a>
+        </p>
+    </header>
+
+    <hr>
+
+
+  
+    <main>
+
+        <h2>Selected Products</h2>
+
+        <p>
+            Please check your selected items before placing the order.
+        </p>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Wireless Headphones</td>
+                    <td>1</td>
+                    <td>₹2,499</td>
+                    <td>₹2,499</td>
+                </tr>
+
+                <tr>
+                    <td>Mechanical Keyboard</td>
+                    <td>1</td>
+                    <td>₹3,499</td>
+                    <td>₹3,499</td>
+                </tr>
+
+                <tr>
+                    <td>Gaming Mouse</td>
+                    <td>2</td>
+                    <td>₹999</td>
+                    <td>₹1,998</td>
+                </tr>
+
+                <tr>
+                    <th colspan="3">Grand Total</th>
+                    <th>₹7,996</th>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <br>
+        <hr>
+
+
+        
+
+        <form action="#" method="post" autocomplete="on">
+
+           
+
+            <fieldset>
+
+                <legend>
+                    <strong>Customer Information</strong>
+                </legend>
+
+                <p>
+                    <label for="customerName">
+                        Full Name:
+                    </label>
+                    <br>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        name="customer_name"
+                        placeholder="Enter your full name"
+                        minlength="3"
+                        maxlength="50"
+                        pattern="[A-Za-z ]+"
+                        autocomplete="name"
+                        required
+                    >
+                </p>
+
+
+                <p>
+                    <label for="email">
+                        Email Address:
+                    </label>
+                    <br>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        autocomplete="email"
+                        required
+                    >
+                </p>
+
+
+                <p>
+                    <label for="mobile">
+                        Mobile Number:
+                    </label>
+                    <br>
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        name="mobile_number"
+                        placeholder="Enter 10-digit mobile number"
+                        pattern="[0-9]{10}"
+                        minlength="10"
+                        maxlength="10"
+                        autocomplete="tel"
+                        required
+                    >
+                </p>
+
+            </fieldset>
+
+            <br>
+
+
+            <fieldset>
+
+                <legend>
+                    <strong>Delivery Information</strong>
+                </legend>
+
+                <p>
+                    <label for="houseStreet">
+                        House / Street Address:
+                    </label>
+                    <br>
+
+                    <input
+                        type="text"
+                        id="houseStreet"
+                        name="house_street"
+                        placeholder="House number, street and area"
+                        minlength="5"
+                        maxlength="150"
+                        autocomplete="street-address"
+                        required
+                    >
+                </p>
+
+
+                <p>
+                    <label for="city">
+                        City:
+                    </label>
+                    <br>
+
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="Enter your city"
+                        minlength="2"
+                        maxlength="50"
+                        autocomplete="address-level2"
+                        required
+                    >
+                </p>
+
+
+                <p>
+                    <label for="state">
+                        State:
+                    </label>
+                    <br>
+
+                    <select
+                        id="state"
+                        name="state"
+                        autocomplete="address-level1"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select State --
+                        </option>
+
+                        <option value="uttar-pradesh">
+                            Uttar Pradesh
+                        </option>
+
+                        <option value="delhi">
+                            Delhi
+                        </option>
+
+                        <option value="maharashtra">
+                            Maharashtra
+                        </option>
+
+                        <option value="rajasthan">
+                            Rajasthan
+                        </option>
+
+                        <option value="karnataka">
+                            Karnataka
+                        </option>
+
+                        <option value="gujarat">
+                            Gujarat
+                        </option>
+
+                        <option value="west-bengal">
+                            West Bengal
+                        </option>
+
+                    </select>
+                </p>
+
+
+                <p>
+                    <label for="postalCode">
+                        Postal Code:
+                    </label>
+                    <br>
+
+                    <input
+                        type="text"
+                        id="postalCode"
+                        name="postal_code"
+                        placeholder="Enter 6-digit PIN code"
+                        pattern="[0-9]{6}"
+                        minlength="6"
+                        maxlength="6"
+                        inputmode="numeric"
+                        autocomplete="postal-code"
+                        required
+                    >
+                </p>
+
+
+                <p>
+                    <label for="country">
+                        Country:
+                    </label>
+                    <br>
+
+                    <select
+                        id="country"
+                        name="country"
+                        autocomplete="country-name"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select Country --
+                        </option>
+
+                        <option value="india">
+                            India
+                        </option>
+
+                        <option value="usa">
+                            United States
+                        </option>
+
+                        <option value="uk">
+                            United Kingdom
+                        </option>
+
+                        <option value="canada">
+                            Canada
+                        </option>
+
+                        <option value="australia">
+                            Australia
+                        </option>
+
+                        <option value="germany">
+                            Germany
+                        </option>
+
+                    </select>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+
+          
+
+            <fieldset>
+
+                <legend>
+                    <strong>Delivery Method</strong>
+                </legend>
+
+                <p>
+                    Select your preferred delivery option:
+                </p>
+
+                <input
+                    type="radio"
+                    id="standard"
+                    name="delivery_method"
+                    value="standard"
+                    required
+                >
+
+                <label for="standard">
+                    Standard Delivery - 5 to 7 days
+                </label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="express"
+                    name="delivery_method"
+                    value="express"
+                >
+
+                <label for="express">
+                    Express Delivery - 2 to 3 days
+                </label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="sameDay"
+                    name="delivery_method"
+                    value="same-day"
+                >
+
+                <label for="sameDay">
+                    Same Day Delivery
+                </label>
+
+            </fieldset>
+
+            <br>
+
+
+           
+            <fieldset>
+
+                <legend>
+                    <strong>Payment Method</strong>
+                </legend>
+
+                <p>
+                    Select your preferred payment method:
+                </p>
+
+                <input
+                    type="radio"
+                    id="card"
+                    name="payment_method"
+                    value="card"
+                    required
+                >
+
+                <label for="card">
+                    Credit / Debit Card
+                </label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="cod"
+                    name="payment_method"
+                    value="cash-on-delivery"
+                >
+
+                <label for="cod">
+                    Cash on Delivery
+                </label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="upi"
+                    name="payment_method"
+                    value="upi-online"
+                >
+
+                <label for="upi">
+                    UPI / Online Payment
+                </label>
+
+                <hr>
+
+
+             
+
+                <h3>Card Payment Details</h3>
+
+                <p>
+                    <label for="cardHolder">
+                        Card Holder Name:
+                    </label>
+                    <br>
+
+                    <input
+                        type="text"
+                        id="cardHolder"
+                        name="card_holder_name"
+                        placeholder="Name printed on card"
+                        minlength="3"
+                        maxlength="50"
+                        autocomplete="cc-name"
+                    >
+                </p>
+
+
+                <p>
+                    <label for="cardNumber">
+                        Card Number:
+                    </label>
+                    <br>
+
+                    <input
+                        type="text"
+                        id="cardNumber"
+                        name="card_number"
+                        placeholder="1234 5678 9012 3456"
+                        pattern="[0-9]{16}"
+                        minlength="16"
+                        maxlength="16"
+                        inputmode="numeric"
+                        autocomplete="cc-number"
+                    >
+                </p>
+
+
+                <p>
+                    <label for="expiry">
+                        Expiry Date:
+                    </label>
+                    <br>
+
+                    <input
+                        type="month"
+                        id="expiry"
+                        name="card_expiry"
+                        autocomplete="cc-exp"
+                    >
+                </p>
+
+
+                <p>
+                    <label for="securityCode">
+                        Security Code (CVV):
+                    </label>
+                    <br>
+
+                    <input
+                        type="password"
+                        id="securityCode"
+                        name="security_code"
+                        placeholder="3-digit CVV"
+                        pattern="[0-9]{3}"
+                        minlength="3"
+                        maxlength="3"
+                        inputmode="numeric"
+                        autocomplete="cc-csc"
+                    >
+                </p>
+
+            </fieldset>
+
+            <br>
+
+
+         
+
+            <fieldset>
+
+                <legend>
+                    <strong>Billing Address</strong>
+                </legend>
+
+                <input
+                    type="checkbox"
+                    id="sameAddress"
+                    name="billing_same_as_delivery"
+                    value="yes"
+                    checked
+                >
+
+                <label for="sameAddress">
+                    My billing address is the same as my delivery address.
+                </label>
+
+            </fieldset>
+
+            <br>
+
+
+           
+
+            <fieldset>
+
+                <legend>
+                    <strong>Delivery Instructions</strong>
+                </legend>
+
+                <p>
+                    <label for="instructions">
+                        Additional Delivery Instructions:
+                    </label>
+                    <br>
+
+                    <textarea
+                        id="instructions"
+                        name="delivery_instructions"
+                        rows="5"
+                        cols="60"
+                        maxlength="300"
+                        placeholder="Example: Please deliver after 5 PM or leave the package with the security guard."
+                    ></textarea>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+
+            
+
+            <fieldset>
+
+                <legend>
+                    <strong>Promo Code</strong>
+                </legend>
+
+                <p>
+                    <label for="coupon">
+                        Coupon / Promo Code:
+                    </label>
+                    <br>
+
+                    <input
+                        type="text"
+                        id="coupon"
+                        name="promo_code"
+                        placeholder="Enter promo code"
+                        maxlength="15"
+                        pattern="[A-Za-z0-9-]+"
+                    >
+                </p>
+
+                <small>
+                    Optional. Use letters, numbers and hyphens only.
+                </small>
+
+            </fieldset>
+
+            <br>
+
+
+            <fieldset>
+
+                <legend>
+                    <strong>Order Confirmation</strong>
+                </legend>
+
+                <p>
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms_conditions"
+                        value="accepted"
+                        required
+                    >
+
+                    <label for="terms">
+                        I agree to the Terms & Conditions and understand
+                        the store's return and refund policy.
+                    </label>
+                </p>
+
+
+                <p>
+                    <input
+                        type="checkbox"
+                        id="orderConfirmation"
+                        name="order_confirmation"
+                        value="confirmed"
+                        required
+                    >
+
+                    <label for="orderConfirmation">
+                        I confirm that my order details, delivery address
+                        and selected products are correct.
+                    </label>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+
+           
+
+            <input
+                type="submit"
+                value="Place Order"
+            >
+
+            <input
+                type="reset"
+                value="Reset"
+            >
+
+        </form>
+
+    </main>
+
+    <hr>
+
+
+   
+
+    <footer>
+
+        <p>
+            <strong>Thank you for shopping with DailyCart!</strong>
+        </p>
+
+        <p>
+            &copy; 2026 DailyCart Online Store. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
